@@ -1,2 +1,3 @@
 # Lista de tarefas
-Vai ter uma pagina de cadastro, uma de login e as tarefas cadastradas dentro
+pagina de cadastro 
+pegar as informaçoes do usuario: nome, sobrenome, email e senha.
