@@ -13,7 +13,10 @@ function login() {
      
   } 
 
-  let usuarioEncontrado = usuarios.find(user => user.nome === nome_login && user.senha === senha_login);
+    
+
+ let usuarioEncontrado = usuarios.find(user => user.nome === nome_login && user.senha === senha_login);
+  
 
     if (usuarioEncontrado){
         alert(`login bem sucedido! bem vindo` );
@@ -24,3 +27,4 @@ function login() {
     if (localStorage.getItem("usuarios")) {
     usuarios = JSON.parse(localStorage.getItem("usuarios"));
 }
+
