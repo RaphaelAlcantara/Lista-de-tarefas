@@ -15,7 +15,7 @@ function login() {
 
   let usuarioEncontrado = usuarios.find(user => user.nome === nome_login && user.senha === senha_login);
 
-    if (usuarios){
+    if (usuarioEncontrado){
         alert(`login bem sucedido! bem vindo` );
     }else  {
         alert("Usuário ou senha incorretos.");
