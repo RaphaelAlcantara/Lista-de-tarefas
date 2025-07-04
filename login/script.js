@@ -1,22 +1,26 @@
-var usuarios = [];
+var usuarios = [
+
+];
+function salvarUsuarios() {
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+}
+
+
 
 function login() {
-    nome_login = document.getElementById("user_login");
-    senha_login = document.getElementById("user_password");
+    nome_login = document.getElementById("user_login").value;
+    senha_login = document.getElementById("user_password").value;
      
   } 
 
+  let usuarioEncontrado = usuarios.find(user => user.nome === nome_login && user.senha === senha_login);
 
-function cadastrar() {
-    email_cadastro = document.getElementById("email_cadastro");
-    senha_cadastro = document.getElementById("senha_cadastro");
+    if (usuarios){
+        alert(`login bem sucedido! bem vindo` );
+    }else  {
+        alert("Usuário ou senha incorretos.");
+    }
 
-    usuarios.push({
-        nome: email_cadastro.value,
-        senha: senha_cadastro.value
-    });
-
-    console.log("Usuário cadastrado: " + email_cadastro.value);
-    console.log(email_cadastro.value);
-    console.log(senha_cadastro.value);
+    if (localStorage.getItem("usuarios")) {
+    usuarios = JSON.parse(localStorage.getItem("usuarios"));
 }
