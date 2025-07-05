@@ -1,10 +1,29 @@
-var usuarios = [
+
+//array que guarda os users
+let usuarios = [
 
 ];
+
+function adicionarUsuario(email, senha) {
+    usuarios.push({ nome: email, senha: senha });
+    salvarUsuarios();
+}
+
+// Função para salvar no localStorage
 function salvarUsuarios() {
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 }
 
+// Função para carregar usuários do localStorage
+function carregarUsuarios() {
+    const dados = localStorage.getItem("usuarios");
+    if (dados) {
+        usuarios = JSON.parse(dados);
+    }
+}
+
+// Carregar ao iniciar
+carregarUsuarios();
 
 
 function login() {

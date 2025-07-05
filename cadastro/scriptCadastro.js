@@ -2,8 +2,7 @@ function cadastrar() {
     let email = document.getElementById("email_cadastro").value;
     let senha = document.getElementById("senha_cadastro").value;
 
-    usuarios.push({ nome: email, senha: senha }); // adiciona ao array
-    salvarUsuarios(); // salva no navegador
+   adicionarUsuario(email, senha); // chama a função do usuario
 
     alert("Usuário cadastrado com sucesso!");
 }
