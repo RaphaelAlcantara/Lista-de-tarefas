@@ -23,6 +23,3 @@ function cadastrar() {
     console.log(email_cadastro.value);
     console.log(senha_cadastro.value);
 }
-
-console.log(email_cadastro.value);
-console.log(senha_cadastro.value);
