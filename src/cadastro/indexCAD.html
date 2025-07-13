@@ -4,24 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    
 </head>
 <body>
     <main class="container">
         <form>
             <h1>Cadastro</h1>
+
+            <div class="input-box">
+                <input id="nome_cadastro" placeholder="Nome" type="text">
+                <i class="bx bxs-user"></i>
+            </div>
+
+
             <div class="input-box">
                 <input id="email_cadastro" placeholder="Email" type="email">
                 <i class="bx bxs-user"></i>
             </div>
+
     
             <div class="input-box">
                 <input id="senha_cadastro" placeholder="Senha" type="password">
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+
+            <div class="input-box">
+                <input id="confirm_senha_cadastro" placeholder="Confirme sua senha" type="password">
                 <i class="bx bxs-lock-alt"></i>
             </div>
             <button type="submit" onclick="cadastrar()">Cadastrar</button>
     
         </form>
     </main>
-    <script src="/cadastro/scriptCadastro.js"></script>
+    <script src="scriptCadastro.js"></script>
 </body>
 </html>
